@@ -16,7 +16,6 @@ Architecture with Device State Recognition Use-Case
     - [Data structure](#data-structure)
   - [Results](#results)
     - [Classification](#classification)
-    - [Sensitivity Studies](#sensitivity-studies)
     - [Regression](#regression)
   - [Interpretability](#interpretability)
     - [Visualizations of the total weights of the patch embedding layers in a Siren](#visualizations-of-the-total-weights-of-the-patch-embedding-layers-in-a-siren)
@@ -43,15 +42,6 @@ In section [Data](#data) section we present the **Pentostreda** : the publicly a
 
 <p align="center">
 <img src="images/sirene_detailed_architecture.png" width="600">
-</p>
-
-
- The structure of the time series modality pathway.
-![Alt Text](images/nn_timeser.png)
-
-The structure of the visual modality pathway.
-<p align="center">
-  <img src="images/nn_vision.png">
 </p>
 
 
@@ -156,7 +146,7 @@ The summary of the **Pentostreda** data-set with classes samples of Tool 1.
 .</i>
 </p>
 
-
+For more visualisation, see:  [Forces-Visualisation](interpretability/forces_visualisation/)
 
 ### Data structure
 The folder contains the pictures of the flank wear, pictures of metal workpeace chips and the spectrograms of the forces in 3 axes (Fx, Fy, Fz).
@@ -195,15 +185,6 @@ This section provides a summary of the results of the project, including any per
   <br>
   <i>Figure: Receiver operating multi-class characteristic for SIREN hyper-band optimised multimodal (TSC: Tool, Sectrogram, Chip) model.</i>
 </p>
-
-### Sensitivity Studies
-
-
-
-<!-- <p align="center">
-  <img src="images/sensitivity_siren.png" alt="Sensitivity_siren" width="500"/><br>
-  <em>Figure: Effect of Siren hyperparameters on Pentostreda dataset.</em>
-</p> -->
 
 
 
