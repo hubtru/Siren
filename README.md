@@ -70,24 +70,24 @@ To use this project, follow these steps:
 1. Download the project files to your local machine.
 2. Choose the script that you want to use.
  - One or multiple unimodal classification models:
-    - [siren_base_tool.ipynb](example/jupyter_notebooks_classification/siren_base_tool.ipynb), train and save unimodal network for tool images.
-    - [siren_base_spec.ipynb](example/jupyter_notebooks_classification/siren_base_spec.ipynb), train and save unimodal network for spectrogram images.
-    - [siren_base_chip.ipynb](example/jupyter_notebooks_classification/siren_base_chip.ipynb), train and save unimodal network for chip images.
+    - [siren_base_tool.ipynb](jupyter_notebooks/classification/siren_base_tool.ipynb), train and save unimodal network for tool images.
+    - [siren_base_spec.ipynb](jupyter_notebooks/classification/siren_base_spec.ipynb), train and save unimodal network for spectrogram images.
+    - [siren_base_chip.ipynb](jupyter_notebooks/classification/siren_base_chip.ipynb), train and save unimodal network for chip images.
   - One or multiple multimodal classification models (requires saved unimodal .h5 models):
-    - [siren_base_multi_ts.ipynb](example/jupyter_notebooks_classification/siren_base_multi_ts.ipynb), train and save multimodal network for tool and spectrogram images.
-    - [siren_base_multi_sc.ipynb](example/jupyter_notebooks_classification/siren_base_multi_sc.ipynb), train and save multimodal network for spectrogram and chip images.
-    - [siren_base_multi_tc.ipynb](example/jupyter_notebooks_classification/siren_base_multi_tc.ipynb), train and save multimodal network for tool and chip images.
-    - [siren_base_multi_tsc.ipynb](example/jupyter_notebooks_classification/siren_base_multi_tsc.ipynb), train and save multimodal network for tool, spectrogram and chip images.
+    - [siren_base_multi_ts.ipynb](jupyter_notebooks/classification/siren_base_multi_ts.ipynb), train and save multimodal network for tool and spectrogram images.
+    - [siren_base_multi_sc.ipynb](jupyter_notebooks/classification/siren_base_multi_sc.ipynb), train and save multimodal network for spectrogram and chip images.
+    - [siren_base_multi_tc.ipynb](jupyter_notebooks/classification/siren_base_multi_tc.ipynb), train and save multimodal network for tool and chip images.
+    - [siren_base_multi_tsc.ipynb](jupyter_notebooks/classification/siren_base_multi_tsc.ipynb), train and save multimodal network for tool, spectrogram and chip images.
   ___
   - One or multiple unimodal regression models:
-    - [siren_reg_base_tool.ipynb](example/jupyter_notebooks_regression/siren_reg_base_tool.ipynb), train and save unimodal network for tool images.
-    - [siren_reg_base_spec.ipynb](example/jupyter_notebooks_regression/siren_reg_base_spec.ipynb), train and save unimodal network for spectrogram images.
-    - [siren_reg_base_chip.ipynb](example/jupyter_notebooks_regression/siren_reg_base_chip.ipynb), train and save unimodal network for chip images.
+    - [siren_reg_base_tool.ipynb](jupyter_notebooks/regresssion/siren_reg_base_tool.ipynb), train and save unimodal network for tool images.
+    - [siren_reg_base_spec.ipynb](jupyter_notebooks/regresssion/siren_reg_base_spec.ipynb), train and save unimodal network for spectrogram images.
+    - [siren_reg_base_chip.ipynb](jupyter_notebooks/regresssion/siren_reg_base_chip.ipynb), train and save unimodal network for chip images.
   - One or multiple multimodal regression models (requires saved unimodal regression models):
-    - [siren_reg_base_multi_ts.ipynb](example/jupyter_notebooks_regression/siren_reg_base_multi_ts.ipynb), train and save multimodal network for tool and spectrogram images.
-    - [siren_reg_base_multi_sc.ipynb](example/jupyter_notebooks_regression/siren_reg_base_multi_sc.ipynb), train and save multimodal network for spectrogram and chip images.
-    - [siren_reg_base_multi_tc.ipynb](example/jupyter_notebooks_regression/siren_reg_base_multi_tc.ipynb), train and save multimodal network for tool and chip images.
-    - [siren_reg_base_multi_tsc.ipynb](example/jupyter_notebooks_regression/siren_reg_base_multi_tsc.ipynb), train and save multimodal network for tool, spectrogram and chip images.
+    - [siren_reg_base_multi_ts.ipynb]jupyter_notebooks/regresssion/siren_reg_base_multi_ts.ipynb), train and save multimodal network for tool and spectrogram images.
+    - [siren_reg_base_multi_sc.ipynb](jupyter_notebooks/regresssion/siren_reg_base_multi_sc.ipynb), train and save multimodal network for spectrogram and chip images.
+    - [siren_reg_base_multi_tc.ipynb](jupyter_notebooks/regresssion/siren_reg_base_multi_tc.ipynb), train and save multimodal network for tool and chip images.
+    - [siren_reg_base_multi_tsc.ipynb](jupyter_notebooks/regresssion/siren_reg_base_multi_tsc.ipynb), train and save multimodal network for tool, spectrogram and chip images.
 3. Update the paths section in each notebook if you want they differ from the recommended setup.
 4. Change the variables section if desired.
 5. Run the script
