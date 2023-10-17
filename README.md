@@ -30,8 +30,7 @@ Effective monitoring of device conditions and potential damage is a critical tas
 
 <img src="images/problem_formulation.png" alt="Problem_Formulation" width="600"/>
 
-*Figure: A sample instance from Pentostreda that shows the importance of lever-
-aging multimodal data for device state prediction.*
+*Figure: A sample instance from Pentostreda that shows the importance of leveraging multimodal data for device state prediction.*
 
 
 The **Siren** uses the linearly embedded patches of the grouped signals,
@@ -80,14 +79,14 @@ To use this project, follow these steps:
     - [siren_base_multi_tsc.ipynb](jupyter_notebooks/classification/siren_base_multi_tsc.ipynb), train and save multimodal network for tool, spectrogram and chip images.
   ___
   - One or multiple unimodal regression models:
-    - [siren_reg_base_tool.ipynb](jupyter_notebooks/regresssion/siren_reg_base_tool.ipynb), train and save unimodal network for tool images.
-    - [siren_reg_base_spec.ipynb](jupyter_notebooks/regresssion/siren_reg_base_spec.ipynb), train and save unimodal network for spectrogram images.
-    - [siren_reg_base_chip.ipynb](jupyter_notebooks/regresssion/siren_reg_base_chip.ipynb), train and save unimodal network for chip images.
+    - [siren_reg_base_tool.ipynb](jupyter_notebooks/regression/siren_reg_base_tool.ipynb), train and save unimodal network for tool images.
+    - [siren_reg_base_spec.ipynb](jupyter_notebooks/regression/siren_reg_base_spec.ipynb), train and save unimodal network for spectrogram images.
+    - [siren_reg_base_chip.ipynb](jupyter_notebooks/regression/siren_reg_base_chip.ipynb), train and save unimodal network for chip images.
   - One or multiple multimodal regression models (requires saved unimodal regression models):
-    - [siren_reg_base_multi_ts.ipynb]jupyter_notebooks/regresssion/siren_reg_base_multi_ts.ipynb), train and save multimodal network for tool and spectrogram images.
-    - [siren_reg_base_multi_sc.ipynb](jupyter_notebooks/regresssion/siren_reg_base_multi_sc.ipynb), train and save multimodal network for spectrogram and chip images.
-    - [siren_reg_base_multi_tc.ipynb](jupyter_notebooks/regresssion/siren_reg_base_multi_tc.ipynb), train and save multimodal network for tool and chip images.
-    - [siren_reg_base_multi_tsc.ipynb](jupyter_notebooks/regresssion/siren_reg_base_multi_tsc.ipynb), train and save multimodal network for tool, spectrogram and chip images.
+    - [siren_reg_base_multi_ts.ipynb](jupyter_notebooks/regression/siren_reg_base_multi_ts.ipynb), train and save multimodal network for tool and spectrogram images.
+    - [siren_reg_base_multi_sc.ipynb](jupyter_notebooks/regression/siren_reg_base_multi_sc.ipynb), train and save multimodal network for spectrogram and chip images.
+    - [siren_reg_base_multi_tc.ipynb](jupyter_notebooks/regression/siren_reg_base_multi_tc.ipynb), train and save multimodal network for tool and chip images.
+    - [siren_reg_base_multi_tsc.ipynb](jupyter_notebooks/regression/siren_reg_base_multi_tsc.ipynb), train and save multimodal network for tool, spectrogram and chip images.
 3. Update the paths section in each notebook if you want they differ from the recommended setup.
 4. Change the variables section if desired.
 5. Run the script
@@ -157,13 +156,12 @@ dataset/
 ├── spec/x/
 ├── spec/y/
 ├── spec/z/
-└── tool
-
-data/
+├── tool
 │
 ├── labels.csv
 ├── labels_reg.csv
-└── labels_sample.csv
+├── labels_sample.csv
+└── labels_reg_sample.csv
 ```
 ## Results
 
@@ -193,7 +191,7 @@ This section provides a summary of the results of the project, including any per
 <p align="center">
   <img src="images/visualisation_tool_wear_gaps_overhang.png" alt="visualisation_tool_wear_gaps_overhang" width="60%"/>
   <br>
-  <i>Figure: Visualisation of the base (blue-dotted), tool wear (blue), overhang (red), gaps(yellow) labels used for the regression problem.</i>
+  <i>Figure: Visualisation of the base (blue-dotted), tool wear (blue), overhang (red), gaps (yellow) labels used for the regression problem.</i>
 </p>
 
 
