@@ -10,6 +10,7 @@ Architecture with Device State Recognition Use-Case
     - [Overview](#overview)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [SIREN Colab Demo](#siren-colab-demo)
   - [Data](#data)
     - [Data collection](#data-collection)
     - [Overview](#overview-1)
@@ -40,7 +41,7 @@ In section [Data](#data) section we present the **Pentostreda** : the publicly a
 
 
 <p align="center">
-<img src="images/sirene_detailed_architecture.png" width="600">
+<img src="images/siren_detailed_architecture.png" width="600">
 </p>
 
 
@@ -82,7 +83,7 @@ To use this project, follow these steps:
     - [siren_reg_base_tool.ipynb](jupyter_notebooks/regression/siren_reg_base_tool.ipynb), train and save unimodal network for tool images.
     - [siren_reg_base_spec.ipynb](jupyter_notebooks/regression/siren_reg_base_spec.ipynb), train and save unimodal network for spectrogram images.
     - [siren_reg_base_chip.ipynb](jupyter_notebooks/regression/siren_reg_base_chip.ipynb), train and save unimodal network for chip images.
-  - One or multiple multimodal regression models (requires saved unimodal regression models):
+  - One or multiple multimodal regression models (requires saved .h5 unimodal regression models):
     - [siren_reg_base_multi_ts.ipynb](jupyter_notebooks/regression/siren_reg_base_multi_ts.ipynb), train and save multimodal network for tool and spectrogram images.
     - [siren_reg_base_multi_sc.ipynb](jupyter_notebooks/regression/siren_reg_base_multi_sc.ipynb), train and save multimodal network for spectrogram and chip images.
     - [siren_reg_base_multi_tc.ipynb](jupyter_notebooks/regression/siren_reg_base_multi_tc.ipynb), train and save multimodal network for tool and chip images.
@@ -93,6 +94,30 @@ To use this project, follow these steps:
 
 Those Notebooks will run fine with the structure of the git repository.
 If you want to change dataset paths check the [Data Structures](#data-structure) section.
+
+## SIREN Colab Demo
+The following table showcases the SIREN algorithm demonstrations for both unimodal and multimodal tasks, including their respective modalities, signals, tasks, and descriptions along with links to Colab notebooks.
+
+
+| Task           | Type         | Notebook Link                                                                                                                           | Modalities                                      |
+|----------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| Classification | Unimodal     | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/classification/siren_base_tool.ipynb)                  | Tool images                                     |
+| Classification | Unimodal     | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/classification/siren_base_spec.ipynb)                  | Spectrogram images (Fx, Fy, Fz)                |
+| Classification | Unimodal     | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/classification/siren_base_chip.ipynb)                  | Chip images                                     |
+| Classification | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/classification/siren_base_multi_ts.ipynb)         | Tool images, Spectrogram images (Fx, Fy, Fz)    |
+| Classification | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/classification/siren_base_multi_sc.ipynb)         | Spectrogram images (Fx, Fy, Fz), Chip images    |
+| Classification | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/classification/siren_base_multi_tc.ipynb)         | Tool images, Chip images                        |
+| Classification | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/classification/siren_base_multi_tsc.ipynb)       | Tool images, Spectrogram images (Fx, Fy, Fz), Chip images |
+| Regression     | Unimodal     | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/regression/siren_reg_base_tool.ipynb)              | Tool images                                     |
+| Regression     | Unimodal     | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/regression/siren_reg_base_spec.ipynb)              | Spectrogram images (Fx, Fy, Fz)                |
+| Regression     | Unimodal     | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/regression/siren_reg_base_chip.ipynb)              | Chip images                                     |
+| Regression     | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/regression/siren_reg_base_multi_ts.ipynb)     | Tool images, Spectrogram images (Fx, Fy, Fz)    |
+| Regression     | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/regression/siren_reg_base_multi_sc.ipynb)     | Spectrogram images (Fx, Fy, Fz), Chip images    |
+| Regression     | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/regression/siren_reg_base_multi_tc.ipynb)     | Tool images, Chip images                        |
+| Regression     | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/regression/siren_reg_base_multi_tsc.ipynb)   | Tool images, Spectrogram images (Fx, Fy, Fz), Chip images |
+
+
+
 
 ## Data
 **Pentostreda**: Pento-modal Device State Recognition Dataset
