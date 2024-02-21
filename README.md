@@ -117,6 +117,14 @@ The following table showcases the SIREN algorithm demonstrations for both unimod
 | Regression     | Multimodal   | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/Siren/blob/main/jupyter_notebooks/regression/siren_reg_base_multi_tsc.ipynb)   | Tool images, Spectrogram images (Fx, Fy, Fz), Chip images |
 
 
+## Hugging Face Space
+
+Check out our demonstrator on Hugging Face Spaces.
+
+
+| Description           | Link                                                                                                                   | Task                      |
+|-----------------------|----------------------------------|---------------------------|
+| Siren Demonstrator   | <a href="https://huggingface.co/spaces/hubtru/Siren"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="50"/></a>| Classification & Regression |
 
 
 ## Data
