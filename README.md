@@ -217,38 +217,6 @@ This section provides a summary of the results of the project, including any per
   <i>Figure: Receiver operating multi-class characteristic for SIREN hyper-band optimised multimodal (TSC: Tool, Sectrogram, Chip) model.</i>
 </p>
 
-### Table: Performance comparison of various models and modalities on the Pentostreda dataset. 
-
-| Model            | Modality | Fusion-Type | Training          | ms/img | Size(MB) | #Params | Flops    | AUC  | Accuracy |
-|------------------|----------|-------------|-------------------|--------|----------|---------|----------|------|----------|
-| Meta-Transformer | t        | -           | 1s 51ms/step      | 78      | 993.3    | 86.6M  | 85199412 | 0.85 | 45.1 (4) |
-| Meta-Transformer | s        | -           | 1s 51ms/step      | 78      | 993.3    | 86.6M  | 85172200 | 0.84 | 43.4 (4) |
-| Meta-Transformer | c        | -           | 1s 54ms/step      | 78      | 993.3    | 86.6M  | 84060374 | 0.85 | 46.9 (4) |
-| Meta-Transformer | ts       | ViT         | 1s 78ms/step      | 81     | 991.9    | 87.5M   | 85819362 | 0.83 | 41.5 (4) |
-| Meta-Transformer | tc       | ViT         | 1s 75ms/step      | 81     | 991.9    | 87.5M   | 86544254 | 0.85 | 48.3 (4) |
-| Meta-Transformer | sc       | ViT         | 1s 73ms/step      | 81     | 991.9    | 87.5M   | 83726432 | 0.84 | 44.1 (4) |
-| Meta-Transformer | tsc      | ViT         | 1s 93ms/step      | 83     | 1004.5   | 88.3M   | 86367545 | 0.85 | 51.7 (4) |
-| ViT              | t        | -           | 3s 64ms/step      | 36     | 417.4    | 36.4M   | 36375641 | 0.87 | 56.5 (3) |
-| ViT              | s        | -           | 3s 69ms/step      | 44     | 418.2    | 36.4M   | 36473957 | 0.87 | 55.7 (3) |
-| ViT              | c        | -           | 3s 62ms/step      | 35     | 417.4    | 36.5M   | 36375641 | 0.89 | 66.3 (2) |
-| ViT              | ts       | Concat      | 5s 75ms/step      | 69     | 836.1    | 72.9M   | 72129427 | 0.88 | 59.2 (3) |
-| ViT              | tc       | Concat      | 5s 62ms/step      | 59     | 835.4    | 72.8M   | 71287741 | 0.89 | 66.4 (2) |
-| ViT              | sc       | Concat      | 5s 62ms/step      | 61     | 836.1    | 72.9M   | 73014364 | 0.89 | 67.6 (2) |
-| ViT              | tsc      | Concat      | 8s 12ms/step      | 101    | 1252.1   | 109M    | 109111829| 0.90 | 68.8 (3) |
-| MLP-Mixer        | t        | -           | 1s 35ms/step      | 26     | 25.7     | 2.2M    | 2156650  | 0.87 | 57.1 (2) |
-| MLP-Mixer        | s        | -           | 1s 36ms/step      | 36     | 30.3     | 2.6M    | 2599088  | 0.88 | 61.3 (2) |
-| MLP-Mixer        | c        | -           | 1s 33ms/step      | 25     | 26.8     | 2.3M    | 2301206  | 0.87 | 55.4 (3) |
-| MLP-Mixer        | ts       | Concat      | 2s 76ms/step      | 43     | 45.5     | 3.9M    | 3895658  | 0.89 | 65.7 (2) |
-| MLP-Mixer        | tc       | Concat      | 2s 71ms/step      | 46     | 40.9     | 3.5M    | 3463465  | 0.88 | 57.6 (3) |
-| MLP-Mixer        | sc       | Concat      | 2s 78ms/step      | 44     | 45.5     | 3.9M    | 3826508  | 0.89 | 67.2 (3) |
-| MLP-Mixer        | tsc      | Concat      | 3s 67ms/step      | 53     | 59.5     | 5.1M    | 5086126  | 0.90 | 69.5 (2) |
-| SIREN            | t        | -           | 2s 47ms/step      | 10     | 5.6      | 1.4M    | 1382248  | 0.88 | 58.8 (1) |
-| SIREN            | s        | -           | 2s 53ms/step      | 14     | 7.2      | 1.8M    | 1775464  | 0.89 | 66.2 (1) |
-| SIREN            | c        | -           | 2s 44ms/step      | 9      | 5.6      | 1.4M    | 1382248  | 0.90 | 72.5 (1) |
-| SIREN            | ts       | Concat      | 4s 26ms/step      | 19     | 12.8     | 3.2M    | 3089991  | 0.90 | 72.9 (1) |
-| SIREN            | tc       | Concat      | 4s 25ms/step      | 14     | 11.2     | 2.8M    | 2696775  | 0.90 | 73.7 (1) |
-| SIREN            | sc       | Concat      | 4s 30ms/step      | 16     | 12.8     | 3.2M    | 3089991  | 0.90 | 73.3 (1) |
-| SIREN            | tsc      | Concat      | 6s 34ms/step      | 23     | 18.1     | 4.5M    | 4438376  | 0.90 | **74.9** (1) |
 
 
 ### Table: Sensitivity studies of number of columns on Pentostreda dataset.
@@ -277,6 +245,40 @@ This section provides a summary of the results of the project, including any per
 | 8     | 7038275 | 33        | 8.2M    | 91ms/step   | 77.84        |
 | 9     | 8098056 | 37        | 8.9M    | 87ms/step   | 77.75        |
 | 10    | 9583319 | 40        | 9.9M    | 110ms/step  | 77.53        |
+
+
+### Table: Performance comparison of various models and modalities on the Pentostreda dataset. 
+
+| Model            | Modality | Fusion-Type | Training          | ms/img | Size(MB) | #Params | Flops    | AUC  | Accuracy |
+|------------------|----------|-------------|-------------------|--------|----------|---------|----------|------|----------|
+| Meta-Transformer | t        | -           | 1s 51ms/step      | 78      | 993.3    | 86.6M  | 85199412 | 0.85 | 57.1 (2) |
+| Meta-Transformer | s        | -           | 1s 51ms/step      | 78      | 993.3    | 86.6M  | 85172200 | 0.84 | 60.4 (3) |
+| Meta-Transformer | c        | -           | 1s 54ms/step      | 78      | 993.3    | 86.6M  | 84060374 | 0.85 | 63.9 (3) |
+| Meta-Transformer | ts       | ViT         | 1s 78ms/step      | 81     | 991.9    | 87.5M   | 85819362 | 0.83 | 58.5 (3) |
+| Meta-Transformer | tc       | ViT         | 1s 75ms/step      | 81     | 991.9    | 87.5M   | 86544254 | 0.85 | 65.3(4) |
+| Meta-Transformer | sc       | ViT         | 1s 73ms/step      | 81     | 991.9    | 87.5M   | 83726432 | 0.84 | 61.1 (4) |
+| Meta-Transformer | tsc      | ViT         | 1s 93ms/step      | 83     | 1004.5   | 88.3M   | 86367545 | 0.85 | 68.7 (4) |
+| ViT              | t        | -           | 3s 64ms/step      | 36     | 417.4    | 36.4M   | 36375641 | 0.87 | 56.5 (3) |
+| ViT              | s        | -           | 3s 69ms/step      | 44     | 418.2    | 36.4M   | 36473957 | 0.87 | 55.7 (4) |
+| ViT              | c        | -           | 3s 62ms/step      | 35     | 417.4    | 36.5M   | 36375641 | 0.89 | 66.3 (2) |
+| ViT              | ts       | Concat      | 5s 75ms/step      | 69     | 836.1    | 72.9M   | 72129427 | 0.88 | 59.2 (3) |
+| ViT              | tc       | Concat      | 5s 62ms/step      | 59     | 835.4    | 72.8M   | 71287741 | 0.89 | 66.4 (2) |
+| ViT              | sc       | Concat      | 5s 62ms/step      | 61     | 836.1    | 72.9M   | 73014364 | 0.89 | 67.6 (2) |
+| ViT              | tsc      | Concat      | 8s 12ms/step      | 101    | 1252.1   | 109M    | 109111829| 0.90 | 68.8 (3) |
+| MLP-Mixer        | t        | -           | 1s 35ms/step      | 26     | 25.7     | 2.2M    | 2156650  | 0.87 | 57.1 (2) |
+| MLP-Mixer        | s        | -           | 1s 36ms/step      | 36     | 30.3     | 2.6M    | 2599088  | 0.88 | 61.3 (2) |
+| MLP-Mixer        | c        | -           | 1s 33ms/step      | 25     | 26.8     | 2.3M    | 2301206  | 0.87 | 55.4 (4) |
+| MLP-Mixer        | ts       | Concat      | 2s 76ms/step      | 43     | 45.5     | 3.9M    | 3895658  | 0.89 | 65.7 (2) |
+| MLP-Mixer        | tc       | Concat      | 2s 71ms/step      | 46     | 40.9     | 3.5M    | 3463465  | 0.88 | 57.6 (4) |
+| MLP-Mixer        | sc       | Concat      | 2s 78ms/step      | 44     | 45.5     | 3.9M    | 3826508  | 0.89 | 67.2 (3) |
+| MLP-Mixer        | tsc      | Concat      | 3s 67ms/step      | 53     | 59.5     | 5.1M    | 5086126  | 0.90 | 69.5 (2) |
+| SIREN            | t        | -           | 2s 47ms/step      | 10     | 5.6      | 1.4M    | 1382248  | 0.88 | 58.8 (1) |
+| SIREN            | s        | -           | 2s 53ms/step      | 14     | 7.2      | 1.8M    | 1775464  | 0.89 | 66.2 (1) |
+| SIREN            | c        | -           | 2s 44ms/step      | 9      | 5.6      | 1.4M    | 1382248  | 0.90 | 72.5 (1) |
+| SIREN            | ts       | Concat      | 4s 26ms/step      | 19     | 12.8     | 3.2M    | 3089991  | 0.90 | 72.9 (1) |
+| SIREN            | tc       | Concat      | 4s 25ms/step      | 14     | 11.2     | 2.8M    | 2696775  | 0.90 | 73.7 (1) |
+| SIREN            | sc       | Concat      | 4s 30ms/step      | 16     | 12.8     | 3.2M    | 3089991  | 0.90 | 73.3 (1) |
+| SIREN            | tsc      | Concat      | 6s 34ms/step      | 23     | 18.1     | 4.5M    | 4438376  | 0.90 | **74.9** (1) |
 
 ###  Results of MOSI and MOSEI
 
