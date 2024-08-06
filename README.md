@@ -11,12 +11,23 @@ Architecture with Device State Recognition Use-Case
   - [Installation](#installation)
   - [Usage](#usage)
   - [SIREN Colab Demo](#siren-colab-demo)
+  - [Hugging Face Space](#hugging-face-space)
   - [Data](#data)
     - [Data collection](#data-collection)
     - [Overview](#overview-1)
     - [Data structure](#data-structure)
   - [Results](#results)
     - [Classification](#classification)
+    - [Table: Sensitivity studies of number of columns on Pentostreda dataset.](#table-sensitivity-studies-of-number-of-columns-on-pentostreda-dataset)
+    - [Table: Sensitivity studies of depth of blocks on Pentostreda dataset.](#table-sensitivity-studies-of-depth-of-blocks-on-pentostreda-dataset)
+    - [Table: Performance comparison of various models and modalities on the Pentostreda dataset.](#table-performance-comparison-of-various-models-and-modalities-on-the-pentostreda-dataset)
+    - [Results of MOSI and MOSEI](#results-of-mosi-and-mosei)
+    - [Depth-Point and  Intermediate activation removal](#depth-point-and--intermediate-activation-removal)
+  - [Fixing the model size](#fixing-the-model-size)
+    - [ViT](#vit)
+    - [MLP-Mixer:](#mlp-mixer)
+  - [Multimodal Datasets](#multimodal-datasets)
+    - [The HA4M dataset:](#the-ha4m-dataset)
     - [Regression](#regression)
   - [Interpretability](#interpretability)
     - [Visualizations of the total weights of the patch embedding layers in a Siren](#visualizations-of-the-total-weights-of-the-patch-embedding-layers-in-a-siren)
@@ -129,6 +140,10 @@ Check out our demonstrator on Hugging Face Spaces.
 
 ## Data
 **Pentostreda**: Pento-modal Device State Recognition Dataset
+
+Pentostreda is a five-modal data set collected from real-world milling processes over a span of seven weeks. It includes an RGB image of the milling tool, three-time series recordings of force signals, and an image that captures the metallic chips generated during the milling process. After every milling activity, an expert examined the tool's flank wear from a taken image to annotate the dataset. Depending on the observed tool wear, each instance was systematically categorized into one of three classes: new, usable, or dulled. As a result, we have created the multimodal dataset with labels, allowing us to solve the classification problem of the machine state.
+
+
 
 - Data preview (~20 samples) is available in ./dataset
 - Complete Pentostreda dataset (918MB) is available:  [Pentostreda]([URL]()) (available soon)
